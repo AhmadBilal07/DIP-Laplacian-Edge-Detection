@@ -9,8 +9,8 @@ def convolution(image, kernel):
         x = x - m + 1
         y = y - m + 1
         resultImg = np.zeros((x,y))
-        for i in range(y):
-            for j in range(x):
+        for i in range(x):
+            for j in range(y):
                 resultImg[i][j] = np.sum(image[i:i+m, j:j+m]*kernel)
     return resultImg
 
